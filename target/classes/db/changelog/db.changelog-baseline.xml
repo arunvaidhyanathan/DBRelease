@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+    <!-- Baseline changeset with initial tag -->
+    <changeSet id="1" author="liquibase" labels="baseline">
+        <tagDatabase tag="baseline"/>
+    </changeSet>
+    
+    <!-- Example table creation -->
+    <changeSet id="2" author="liquibase" labels="schema-setup">
+        <createTable tableName="db_release_info">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="version" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="varchar(255)"/>
+            <column name="release_date" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="released_by" type="varchar(100)"/>
+        </createTable>
+    </changeSet>
+    
+    <changeSet id="3" author="liquibase" labels="tag">
+        <tagDatabase tag="v1.0"/>
+    </changeSet>
+    
+</databaseChangeLog>

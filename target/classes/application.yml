@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    # PostgreSQL database configuration
+    postgresql:
+      jdbc-url: 
+      username: 
+      password: 
+      driver-class-name: org.postgresql.Driver
+
+  # Liquibase configuration
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+    contexts: development
+    
+  # Include Swagger profile
+  profiles:
+    include: swagger
+
+# Server configuration
+server:
+  port: 8080

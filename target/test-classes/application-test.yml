@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    # H2 in-memory database for testing
+    postgresql:
+      jdbc-url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+      username: sa
+      password: sa
+      driver-class-name: org.h2.Driver
+  
+  # Liquibase configuration for testing
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+    contexts: test
+
+# Server configuration
+server:
+  port: 8080

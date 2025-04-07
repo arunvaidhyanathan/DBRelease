@@ -1,0 +1,3 @@
+com/db/release/DbReleaseApplicationTest.class
+com/db/release/controller/DatabaseRollbackControllerTest.class
+com/db/release/exception/GlobalExceptionHandlerTest.class
