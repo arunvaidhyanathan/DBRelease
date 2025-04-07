@@ -46,10 +46,11 @@ DBRelease/
 ## Technologies Used
 
 - Java 17
-- Spring Boot 3.0.6
+- Spring Boot 3.4.4
 - Liquibase
 - PostgreSQL
 - Maven
+- openapi 2.3.0
 
 ## API Endpoints
 
